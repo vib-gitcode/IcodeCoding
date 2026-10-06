@@ -1,0 +1,42 @@
+h1 
+
+{
+color: red;
+
+}
+
+h2
+
+{
+color: orangered;
+
+
+
+}
+
+body
+{
+    border: 20px ridge green;
+    background-color:  #013220;
+    animation-name: flash;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+
+
+}
+
+footer
+{
+size: 5px;
+
+
+}
+
+@keyframes flash {
+0%{font-colour: 2px;}
+30%{font-size: 9px;}
+60%{font-size: 12px;}
+}
+
+
