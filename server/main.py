@@ -8,11 +8,13 @@ messageinfo = ""
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=['*']
+    allow_origins=['http://127.0.0.1:5500/'],
+    allow_headers=["*"],
+    allow_methods=["*"]
 )
 class Item(BaseModel):
-    Title: str
-    Message: str
+    Title: str = "fggfgf"
+    Message: str = "ghhghghg"
 
 @app.post("/send/")
 async def send_message(item:Item):

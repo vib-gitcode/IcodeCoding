@@ -9,22 +9,27 @@ async function getMessage() {
         console.log(result)
     }
 
-    catch (error) { 
+    catch (error) {
         console.error(error.message);
     }
-    
+
 }
 
 var message = document.getElementById("msgbox").value
 
-function sendJSON(){
-fetch('http://localhost:8000/send/', {
-    method: 'POST',
-    body: {
-        Title: 'Post Message',
-        message: message
-    }
-})
+function sendJSON() {
+    fetch('http://localhost:8000/send/', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify ({
+            Title: "string",
+            Message: "string"
+
+
+        })
+    })
 
 
 }
