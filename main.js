@@ -6,7 +6,7 @@ async function getMessage() {
         if (!response.ok) {
             throw new Error('Response status: ${response.status}');
         } const result = await response.json();
-        console.log(result)
+        document.getElementById("postArea").innerHTML = result.message
     }
 
     catch (error) {
@@ -15,17 +15,19 @@ async function getMessage() {
 
 }
 
-var message = document.getElementById("msgbox").value
+
 
 function sendJSON() {
+    var message = document.getElementById("msgbox").value
     fetch('http://localhost:8000/send/', {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         },
+        
         body: JSON.stringify ({
-            Title: "string",
-            Message: "string"
+            "Title": "string",
+            "Message": message
 
 
         })
@@ -33,4 +35,5 @@ function sendJSON() {
 
 
 }
-getMessage()
+
+setInterval(getMessage, 1000)
