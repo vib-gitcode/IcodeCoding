@@ -14,8 +14,8 @@ app.add_middleware(
     allow_credentials=True
 )
 class Item(BaseModel):
-    Title: str = "fggfgf"
-    Message: str = "ghhghghg"
+    Title: str
+    Message: str
 
 @app.post("/send/")
 async def send_message(item:Item):

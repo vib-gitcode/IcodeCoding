@@ -1,0 +1,12 @@
+p
+{
+    padding: 1cm;
+    outline: solid rgb(0, 66, 128) 4px;
+    border-radius: 100px;
+}
+#navbar
+{
+    position: fixed;
+    size: 1cm;
+    align: center;
+}
