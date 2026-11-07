@@ -1,7 +1,7 @@
 
 async function getMessage() {
 <<<<<<< HEAD
-    const url = "20.171.127.66/fetch";
+    const url = "20.171.127.66:8000/fetch";
 =======
     const url = "http://172.16.11.161:8080/fetch/";
 >>>>>>> 183923edf8ccb90e4f30cdef1e5b0d5c4586d58f
