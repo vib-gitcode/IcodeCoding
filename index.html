@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server's Output</title>
+    <link rel="stylesheet" href="messagestyles.css">
 </head>
 
-<body style="background-color: rgb(160, 255, 223);">
-        <input type="text" name="message">
-        <input type="submit">
-    </form>
+<body style="background-color: #a0ffdf;">
+    <div id="navbar">
+        <input id="msgbox" type="text" name="message">
+        <input  onclick="sendJSON()" type="submit" id="">
+        </div>
+    
+
+    <div id="postArea"></div>
 </body>
 <script src="main.js"></script>
 </html>

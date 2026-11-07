@@ -8,7 +8,10 @@ messageinfo = ""
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=['*']
+    allow_origins=['*'],
+    allow_headers=["*"],
+    allow_methods=["*"],
+    allow_credentials=True
 )
 class Item(BaseModel):
     Title: str
@@ -16,9 +19,10 @@ class Item(BaseModel):
 
 @app.post("/send/")
 async def send_message(item:Item):
-    
+    #this global messageinfo statement makes sure the method is talking about the variable on line 5. without this, line 24 thinks that we are trying to add to a local variable called messageinfo, which of course, does not exist. good job dude, this was a tough bug.
+    global messageinfo
+    messageinfo += item.Message+" <br>"
    
-    messageinfo += item.Message
     
 
 
