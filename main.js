@@ -1,6 +1,6 @@
 
 async function getMessage() {
-    const url = "20.171.127.66:8000/fetch";
+    const url = "http://20.171.127.66:8000/fetch";
 
     try {
         const response = await fetch(url);
