@@ -1,6 +1,6 @@
 
 async function getMessage() {
-    const url = "http://20.171.127.66:8000/fetch";
+    const url = "https://supreme-succotash-jjwp4g7v7wx5fgpx-8000.app.github.dev/fetch";
 
     try {
         const response = await fetch(url);
