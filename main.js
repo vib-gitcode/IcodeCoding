@@ -1,7 +1,6 @@
 
 async function getMessage() {
-    const url = "https://supreme-succotash-jjwp4g7v7wx5fgpx-8000.app.github.dev/fetch";
-
+    const url = "https://sparkling-dedication-production-636d40b2.up.railway.app/fetch/";
     try {
         const response = await fetch(url);
         if (!response.ok) {
